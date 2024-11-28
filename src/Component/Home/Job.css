@@ -1,0 +1,20 @@
+
+.card-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-container:hover .card-image {
+    transform: scale(1.1);
+  }
+  
+  .card-image {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 50%;
+    object-fit:fill;
+  }
+  #jobcard{
+    color:#333456da;
+  }
+  
