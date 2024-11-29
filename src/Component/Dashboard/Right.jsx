@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Right() {
   return (
-    <div className="hidden md:flex md:flex-col md:w-[20%] md:px-4 md:py-36 float-end text-center" id="bgnavbar">
+    <div className="hidden md:flex md:flex-col md:w-[20%] md:px-4 md:py-36 float-end text-center bg-gray-500" >
       <div className="">
         <div className="flex flex-col">
           {/* Use relative positioning for the parent link and absolute for the tooltip */}
@@ -19,7 +19,7 @@ function Right() {
           
           {/* Other links */}
           <Link to="/" className="mb-2 px-2 py-2 rounded-md bg-slate-600"><span className="text-white">Profile</span></Link>
-          <Link to="/" className="mb-2 px-2 py-2 rounded-md bg-slate-600"><span className="text-white">Abroadium ID</span></Link>
+          <Link to="/" className="mb-2 px-2 py-2 rounded-md bg-slate-600"><span className="text-white">Demoname ID</span></Link>
           <Link to="/" className="mb-2 px-2 py-2 rounded-md bg-slate-600"><span className="text-white">Content 1</span></Link>
           <Link to="/" className="mb-2 px-2 py-2 rounded-md bg-slate-600"><span className="text-white">Content 2</span></Link>
           <Link to="/uploadresume" className="mb-2 px-2 py-2 rounded-md bg-slate-600"><span className="text-white">Test</span></Link>

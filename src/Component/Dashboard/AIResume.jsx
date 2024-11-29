@@ -123,10 +123,10 @@ function AIResume() {
 
   return (
     <>
-      <div className='bg-gray-800 w-full px-5'>
+      <div className='bg-gray-400 w-full px-5'>
         <div className='mt-20'>
           <div className='flex items-center md:gap-10'>
-            <h1 className='font-bold text-4xl py-8 text-white'>Resume Builder</h1>
+            <h1 className='font-bold text-4xl py-8 text-black'>Resume Builder</h1>
             <Link to={`https://abroadium-arbuild-dev-fe.vercel.app/?${token}`}>
               <div className='flex justify-center mt-2'>
                 <button className='px-3 py-3 font-bold rounded-xl bg-slate-300 text-black'>Build your Resume Now</button>
@@ -227,7 +227,7 @@ function AIResume() {
                   <textarea
                     value={note}
                     onChange={handleNoteChange}
-                    className='bg-gray-800 text-white px-2 py-1 rounded-md w-full'
+                    className='bg-gray-500 text-gray-500 px-2 py-1 rounded-md w-full'
                     rows='2'
                   />
                   {hasLink && (

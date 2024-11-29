@@ -43,7 +43,7 @@ function UploadScreen() {
           </div>
         </div>
       </div>
-      <h6 className="font-semibold">Abroadium's AI Loading...</h6>
+      <h6 className="font-semibold">Demoname AI Loading...</h6>
       <div className="space-y-2 mt-4">
         {messages.map((message, idx) => (
           <div key={idx} className="relative flex items-center font-semibold text-lg p-2 rounded-full">

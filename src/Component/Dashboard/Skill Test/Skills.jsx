@@ -167,11 +167,11 @@ const Skills = () => {
   }
 
   return (
-    <div className="py-16 bg-gray-700 w-full">
-      <h1 className="text-3xl text-center md:text-5xl font-bold text-white p-3">Take Skill Assessment</h1>
+    <div className="py-16 bg-gray-400 w-full">
+      <h1 className="text-3xl text-center md:text-5xl font-bold text-gray-800 p-3">Take Skill Assessment</h1>
       <div className="grid grid-cols-2 gap-4 px-5 py-5 text-center">
   {skills.map((skill, index) => (
-    <div key={index} className="bg-slate-700 rounded-xl shadow-2xl border-2 border-slate-600 px-5 py-4 text-center">
+    <div key={index} className="bg-slate-500 rounded-xl shadow-2xl border-2 border-slate-600 px-5 py-4 text-center">
       <h3 className="text-3xl text-white font-semibold py-3">{skill.name}</h3>
       <p className="text-center text-white py-1">Total Questions: {skill.total_question}</p>
       <p className="text-center text-white py-1">Right Answers: {skill.right_answer}</p>

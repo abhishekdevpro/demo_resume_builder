@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import logo from './logo.png';
+import logo from '../../Component/Footer/logoss.jpg';
 import './Home.css';
 import { Link } from 'react-router-dom';
 
@@ -88,8 +88,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed z-50 min-w-full" id='bgnavbar'>
-        <div className="px-4">
+      <nav className="fixed z-50 min-w-full " id='bgnavbar'>
+        <div className="px-4 bg-white">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/" className="">
@@ -98,30 +98,30 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               <div className="hidden sm:flex">
-                <Link to="/" className="text-white hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center"><i className="fa-solid fa-house"></i></Link>
-                <Link to="/" className="text-white hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center">Plan - Free</Link>
-                <Link to="/" className="text-gray-400 hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center">Jobs</Link>
+                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center"><i className="fa-solid fa-house"></i></Link>
+                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center">Plan - Free</Link>
+                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center">Jobs</Link>
                 
                 {loading ? (
-                  <div className='text-white font-semibold px-3 py-3'>Loading...</div>
+                  <div className='text-gray-500 font-semibold px-3 py-3'>Loading...</div>
                 ) : accuracyPercentage !== null ? (
                   <div className="api-data-container">
-                    <p className='text-white font-semibold px-3 py-3'>AI Score: {accuracyPercentage}</p>
+                    <p className='text-gray-500 font-semibold px-3 py-3'>AI Score: {accuracyPercentage}</p>
                   </div>
                 ) : (
                   <button
                     type="button"
                     onClick={resumeScore}
-                    className="text-white hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold flex align-middle justify-center gap-1 items-center"
+                    className="text-gray-500 hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold flex align-middle justify-center gap-1 items-center"
                   >
                     Resume Score
                   </button>
                 )}
 {console.log(suggestions)}
-                <button className="text-white hover:text-yellow-500 px-3 py-3 items-center rounded-md text-lg font-semibold" onClick={handleClick}>Suggest</button>
+                <button className="text-gray-500 hover:text-yellow-500 px-3 py-3 items-center rounded-md text-lg font-semibold" onClick={handleClick}>Suggest</button>
                 {isOpen && (
-                  <div className="absolute right-56 top-10 bg-gray-600 mt-2 py-2 w-64 shadow-lg rounded-md">
-                    <p className="block px-4 py-2 text-white text-sm ">
+                  <div className="absolute right-56 top-10 bg-gray-200 mt-2 py-2 w-64 shadow-lg rounded-md">
+                    <p className="block px-4 py-2 text-gray-500 text-sm ">
                       {isLoading ? 'Loading...' : (
                         suggestions.map((suggestion, index) => (
                           <div key={index}>
@@ -146,10 +146,10 @@ const Navbar = () => {
                   </div>
                 )}
 
-                <Link to="/" className="text-white hover:text-yellow-500 px-3 py-3 items-center rounded-md text-lg font-semibold"><i className="fa-solid fa-message items-center text-purple-500"></i></Link>
-                <Link to="/" target='_blank' className="text-white items-center hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-envelope p-2 items-center text-purple-500"></i>200 Coins</Link>
-                <Link to="/" className="text-white hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-bell text-purple-500"></i></Link>
-                <Link to="/" className="text-white hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-user text-purple-500"></i></Link>
+                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 items-center rounded-md text-lg font-semibold"><i className="fa-solid fa-message items-center text-purple-500"></i></Link>
+                <Link to="/" target='_blank' className="text-gray-500 items-center hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-envelope p-2 items-center text-purple-500"></i>200 Coins</Link>
+                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-bell text-purple-500"></i></Link>
+                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-user text-purple-500"></i></Link>
               </div>
               <div className="flex sm:hidden">
                 <button

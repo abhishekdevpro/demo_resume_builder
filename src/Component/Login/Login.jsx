@@ -256,7 +256,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
-import logo from './Logo1.png';
+import logo from '../../Component/Footer/logoss.jpg';
 import Modal from "./Modal";
 import Signup from "./Signup";
 import toast from 'react-hot-toast';
@@ -316,7 +316,7 @@ function Login() {
     <>
       <div className="p-8 rounded-xl shadow-lg shadow-slate-700 w-full max-w-lg">
         <div>
-          <img src={logo} className="w-20 h-10" alt="Logo" />
+          <img src={logo} className="w-15 h-10" alt="Logo" />
         </div>
         <div className="text-2xl text-black text-center font-bold align-middle">Welcome Back</div>
         <p className="text-black text-base mb-6">
@@ -368,7 +368,7 @@ function Login() {
           <div className="text-center py-2">
             <label className="text-black">Forgot Password?</label>
           </div>
-          <button type="submit" className="w-full bg-yellow-500 text-black px-4 py-2 rounded-md">
+          <button type="submit" className="w-full bg-pink-600 text-white px-4 py-2 rounded-md">
             Login
           </button>
         </form>

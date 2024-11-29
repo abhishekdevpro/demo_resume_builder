@@ -78,7 +78,7 @@
 
 // Third.js
 import React, { useState } from 'react';
-import logo from './logo.png';
+import logo from '../Footer/logoss.jpg';
 import Modal from "./Modal";
 import Student from './Student';
 

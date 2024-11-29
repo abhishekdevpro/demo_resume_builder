@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Home.css'
 import Home_Card from './Home_Card'
-import video from './Video.mp4'
+import video from './video2.mp4'
 const ResumeBuilderFeatures = () => {
   return (
     <>

@@ -8,7 +8,7 @@ function Footer() {
         <a href="https://blog.abroadium.com/terms-conditions/" className="text-[#F2931C] no-underline hover:bg-blue-950 hover:text-[#F2931C] p-2">Terms</a>
         <a href="https://blog.abroadium.com/privacy-policy-3/" className="text-[#F2931C] no-underline hover:bg-blue-950 hover:text-[#F2931C] p-2">Privacy Policy</a>
         <a href="/contact" className="text-[#F2931C] no-underline hover:bg-blue-950 hover:text-[#F2931C] p-2">Contact</a>
-        <span className="text-[#F2931C]">© Copyright By Abroadium.com | All Rights Reserved</span>
+        <span className="text-[#F2931C]">© Copyright By Demoname.com | All Rights Reserved</span>
       </div>
     </footer>
   );

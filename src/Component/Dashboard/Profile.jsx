@@ -252,7 +252,7 @@ const ProfilePage = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="bg-gray-900 ">
+      <div className="bg-gray-300 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
           <div className=" rounded-lg shadow-lg">
             <div className="flex flex-col lg:flex-row gap-6 lg:gap-12">
@@ -291,22 +291,22 @@ const ProfilePage = () => {
                     </p>
                   </div>
                 </div> */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left text-white p-4">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left text-black p-4">
   <div className="flex-1">
     <h2 className="text-sm font-semibold">
       {formData.first_name || "Please update your [Name]"}{" "}
       {formData.last_name || "!"}
     </h2>
-    <p className="text-base text-gray-400 mt-1">
+    <p className="text-base text-gray-600 mt-1">
       {formData.professional_title || "Please update your Profile Title!"}
     </p>
   </div>
   
   <div className="mt-4 sm:mt-0 sm:ml-6">
-    <p className="text-sm text-gray-300 flex items-center">
+    <p className="text-sm text-gray-900 flex items-center">
       📧 <span className="ml-2">{formData.email || "Please update your [Email]"}</span>
     </p>
-    <p className="text-sm text-gray-300 flex items-center mt-1">
+    <p className="text-sm text-gray-900 flex items-center mt-1">
       📱 <span className="ml-2">{formData.phone || "Please update your [Phone]"}</span>
     </p>
   </div>
@@ -370,7 +370,7 @@ const ProfilePage = () => {
                     className="w-full sm:w-auto px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 cursor-pointer transition-colors duration-200 text-center"
                   >
                     {isLoading ? (
-                      <span className="flex items-center justify-center">
+                      <span className="flex items-center justify-center ">
                         <svg
                           className="animate-spin h-5 w-5 mr-2"
                           xmlns="http://www.w3.org/2000/svg"
@@ -398,7 +398,7 @@ const ProfilePage = () => {
                     )}
                   </label>
                   {lastUploadedFileName && (
-                    <span className="text-white text-sm truncate max-w-[200px] sm:max-w-xs">
+                    <span className="text-black text-sm truncate max-w-[200px] sm:max-w-xs">
                       {lastUploadedFileName}
                     </span>
                   )}

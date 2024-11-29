@@ -327,11 +327,12 @@
 
 // export default Signup;
 import React, { useState } from 'react';
-import logo from './Logo1.png';
+import logo from '../Footer/logoss.jpg';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 import { Eye, EyeOff } from "lucide-react";
+import { ToastContainer } from 'react-toastify';
 
 function Signup() {
   const [showPassword, setShowPassword] = useState(false);
@@ -424,6 +425,7 @@ function Signup() {
       }
     } catch (err) {
       console.error('Error Response:', err.response);
+      console.error('Error Response:', err.message);
       if (err.response && err.response.data && err.response.data.message) {
         if (err.response.data.message.includes('duplicate key value')) {
           toast.error('An account with this email already exists.');
@@ -438,11 +440,13 @@ function Signup() {
   };
 
   return (
+    <>
+    <ToastContainer />
     <div>
       <div className='flex justify-end py-2'>
         <div className='p-8 rounded-xl shadow-lg shadow-slate-700 w-full max-w-lg'>
           <div className='flex'>
-            <div><img src={logo} className='h-10 w-20' alt="Logo" /></div>
+            <div><img src={logo} className='h-10 w-15' alt="Logo" /></div>
           </div>
           <div className='text-2xl text-black text-center font-bold'>Let's Get Started</div>
           <h3 className='text-xl text-black font-semibold py-5 text-center'>
@@ -547,7 +551,7 @@ function Signup() {
             </p>
             <button 
               type='submit' 
-              className='w-full py-2 mt-2 px-4 bg-yellow-500 text-black font-semibold rounded-md'
+              className='w-full py-2 mt-2 px-4 bg-pink-600 text-white font-medium rounded-md'
             >
               Sign Up
             </button>
@@ -555,6 +559,7 @@ function Signup() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

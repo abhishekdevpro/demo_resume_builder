@@ -2,7 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from './images/logo3.png'
+import logo from '../Footer/logoss.jpg'
 import upload from './images/upload.png'
 import edit from './images/edit.png'
 import UploadScreen from "./loadingscreens/uploadscreen";

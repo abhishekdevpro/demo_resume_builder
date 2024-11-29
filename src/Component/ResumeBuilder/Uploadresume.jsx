@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import logo from './images/logo3.png';
+import logo from '../Footer/logoss.jpg';
 import upload from './images/upload.png';
 import UploadScreen from "./loadingscreens/uploadscreen";
 import Footer from "./Footer";

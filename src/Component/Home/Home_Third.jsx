@@ -26,7 +26,7 @@ function Home_Third() {
           
           <div className=' flex align-middle items-center'>
             
-            <img src={image} alt="" className=' h-[350px] w-[380px] rounded-xl shadow-lg shadow-gray-600 ' />
+            <img src={icon3} alt="" className=' h-[350px] w-[380px] rounded-xl shadow-lg shadow-gray-600 ' />
           </div>
           <div className='flex flex-col font-semibold px-3 gap-5'>
           <h1 className=' text-center font-bold text-4xl py-2  text-white'>How Our AI Resume Works For You</h1>
@@ -106,7 +106,10 @@ function Home_Third() {
       { src: image3, alt: "Doctor Resume Template", title: "Modern Resume Template" }
     ].map((template, index) => (
       <div key={index} className='relative group'>
-        <img src={template.src} alt={template.alt} className=' h-96 w-full rounded-xl hover:h-[400px]' />
+        <img src={template.src} alt={template.alt} className=' h-96 
+        ' />
+        {/* <img src={template.src} alt={template.alt} className=' h-96 
+        w-full rounded-xl hover:h-[400px]' /> */}
         <h1 className='font-bold text-xl text-center mt-2' id='homecard'>{template.title}</h1>
         <button className='absolute top-0 left-0 right-0 bottom-0 m-auto w-fit h-fit  text-white font-bold py-2 px-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300' id='home_third'>Build Your Resume Now</button>
       </div>
