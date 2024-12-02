@@ -127,7 +127,7 @@ function AIResume() {
         <div className='mt-20'>
           <div className='flex items-center md:gap-10'>
             <h1 className='font-bold text-4xl py-8 text-black'>Resume Builder</h1>
-            <Link to={`https://abroadium-arbuild-dev-fe.vercel.app/?${token}`}>
+            <Link to={`demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`}>
               <div className='flex justify-center mt-2'>
                 <button className='px-3 py-3 font-bold rounded-xl bg-slate-300 text-black'>Build your Resume Now</button>
               </div>
