@@ -22,7 +22,7 @@ function Left() {
             <i className="fa-solid fa-book-open-reader p-3 text-purple-500"></i>Dashboard
           </Link>
           <Link 
-            to={`demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`} 
+            to={`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`} 
             className={`mb-2 px-2 py-2 rounded-md ${activeTab === '/uploadresume' ? 'bg-slate-900 text-white' : 'bg-slate-700 text-white'}`}
             onClick={() => handleTabClick('/uploadresume')}
           >
