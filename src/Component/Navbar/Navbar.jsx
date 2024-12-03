@@ -111,6 +111,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isSignupOpen, setSignupOpen] = useState(false);
+  const token=localStorage.getItem('token')
 
   return (
     <>
@@ -126,17 +127,20 @@ const Navbar = () => {
 
             {/* Desktop Menu */}
             <div className="hidden sm:flex sm:items-center sm:space-x-8">
-              <Link to="/slide/1" className="text-black hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold">AI Resume Builder</Link>
-              <Link to="https://blog.abroadium.com/" className="text-black hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold">Resources</Link>
-              <Link to="https://blog.abroadium.com/about-us/" target="_blank" className="text-black hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold">About Us</Link>
+              <Link 
+              to={token?(`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`):""}
+              
+              className="text-black hover:text-blue-600  px-3 py-2 rounded-md text-lg font-semibold">AI Resume Builder</Link>
+              <Link to="" className="text-black hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold">Resources</Link>
+              <Link to=""  className="text-black hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold">About Us</Link>
               <button
-                className="bg-purple-600 text-white font-semibold px-6 py-2 rounded-full"
+                className="bg-blue-700 text-white hover:shadow-2xl hover:shadow-pink-800 font-semibold px-6 py-2 rounded-full"
                 onClick={() => setLoginOpen(true)}
               >
                 Login
               </button>
               <button
-                className="bg-purple-600 text-white font-semibold px-6 py-2 rounded-full"
+                className="bg-blue-700 text-white hover:shadow-2xl hover:shadow-pink-800 font-semibold px-6 py-2 rounded-full"
                 onClick={() => setSignupOpen(true)}
               >
                 Signup
@@ -160,17 +164,17 @@ const Navbar = () => {
           {isMenuOpen && (
             <div className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-2 bg-gray-50">
-                <Link to="/slide/1" className="block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium">AI Resume Builder</Link>
-                <Link to="https://blog.abroadium.com/" className="block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium">Resources</Link>
-                <Link to="https://blog.abroadium.com/about-us/" target="_blank" className="block text-black hover:text-yellow-500 px-3 py-2 rounded-md text-base font-medium">About Us</Link>
+                <Link to={token?(`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`):""} className="block text-black hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">AI Resume Builder</Link>
+                <Link to="" className="block text-black hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Resources</Link>
+                <Link to="" className="block text-black hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">About Us</Link>
                 <button
-                  className="w-full bg-purple-600 text-white font-medium px-4 py-2 rounded-md"
+                  className="w-full bg-blue-700 text-white font-medium px-4 py-2 rounded-md"
                   onClick={() => setLoginOpen(true)}
                 >
                   Login
                 </button>
                 <button
-                  className="w-full bg-purple-600 text-white font-medium px-4 py-2 rounded-md"
+                  className="w-full bg-blue-700 text-white font-medium px-4 py-2 rounded-md"
                   onClick={() => setSignupOpen(true)}
                 >
                   Signup

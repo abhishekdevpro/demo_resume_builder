@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import image1 from '../images/image1.png';
-import image2 from '../images/image2.png';
-import image3 from '../images/image3.png';
-import image4 from '../images/image4.png';
+import image1 from './img2.jpg';
+import image2 from './img1.jpg';
+// import image3 from '../images/image3.png';
+// import image4 from '../images/image4.png';
 import './Slider.css';
 
 const images = [
   image1,
   image2,
-  image3,
-  image4,
 ];
 
 const ImageSlider = () => {

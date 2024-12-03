@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Right() {
   return (
-    <div className="hidden md:flex md:flex-col md:w-[20%] md:px-4 md:py-36 float-end text-center bg-gray-500" >
+    <div className="hidden md:flex md:flex-col md:w-[20%] md:px-4 md:py-36 float-end text-center bg-gray-400" >
       <div className="">
         <div className="flex flex-col">
           {/* Use relative positioning for the parent link and absolute for the tooltip */}

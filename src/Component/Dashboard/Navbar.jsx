@@ -98,9 +98,9 @@ const Navbar = () => {
             </div>
             <div className="flex items-center">
               <div className="hidden sm:flex">
-                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center"><i className="fa-solid fa-house"></i></Link>
-                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center">Plan - Free</Link>
-                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 rounded-md text-lg font-semibold items-center">Jobs</Link>
+                <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-3 rounded-md text-lg font-semibold items-center"><i className="fa-solid fa-house"></i></Link>
+                <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-3 rounded-md text-lg font-semibold items-center">Plan - Free</Link>
+                <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-3 rounded-md text-lg font-semibold items-center">Jobs</Link>
                 
                 {loading ? (
                   <div className='text-gray-500 font-semibold px-3 py-3'>Loading...</div>
@@ -112,13 +112,13 @@ const Navbar = () => {
                   <button
                     type="button"
                     onClick={resumeScore}
-                    className="text-gray-500 hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold flex align-middle justify-center gap-1 items-center"
+                    className="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold flex align-middle justify-center gap-1 items-center"
                   >
                     Resume Score
                   </button>
                 )}
 {console.log(suggestions)}
-                <button className="text-gray-500 hover:text-yellow-500 px-3 py-3 items-center rounded-md text-lg font-semibold" onClick={handleClick}>Suggest</button>
+                <button className="text-gray-500 hover:text-blue-600 px-3 py-3 items-center rounded-md text-lg font-semibold" onClick={handleClick}>Suggest</button>
                 {isOpen && (
                   <div className="absolute right-56 top-10 bg-gray-200 mt-2 py-2 w-64 shadow-lg rounded-md">
                     <p className="block px-4 py-2 text-gray-500 text-sm ">
@@ -146,10 +146,10 @@ const Navbar = () => {
                   </div>
                 )}
 
-                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-3 items-center rounded-md text-lg font-semibold"><i className="fa-solid fa-message items-center text-purple-500"></i></Link>
-                <Link to="/" target='_blank' className="text-gray-500 items-center hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-envelope p-2 items-center text-purple-500"></i>200 Coins</Link>
-                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-bell text-purple-500"></i></Link>
-                <Link to="/" className="text-gray-500 hover:text-yellow-500 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-user text-purple-500"></i></Link>
+                <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-3 items-center rounded-md text-lg font-semibold"><i className="fa-solid fa-message items-center text-purple-500"></i></Link>
+                <Link to="/" target='_blank' className="text-gray-500 items-center hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-envelope p-2 items-center text-purple-500"></i>200 Coins</Link>
+                <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-bell text-purple-500"></i></Link>
+                <Link to="/" className="text-gray-500 hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold"><i className="fa-solid fa-user text-purple-500"></i></Link>
               </div>
               <div className="flex sm:hidden">
                 <button
@@ -166,10 +166,10 @@ const Navbar = () => {
           {isMenuOpen && (
             <div className="sm:hidden">
               <div className="px-2 pt-2 pb-3 space-y-1">
-                <Link to="/" className="text-white hover:text-yellow-500 block px-3 py-2 rounded-md text-base font-semibold">Home</Link>
-                <Link to="/" className="text-white hover:text-yellow-500 block px-3 py-2 rounded-md text-base font-semibold">Plan-Free</Link>
-                <Link to="/" className="text-white hover:text-yellow-500 block px-3 py-2 rounded-md text-base font-semibold">Job</Link>
-                <Link to="/" className="text-white hover:text-yellow-500 block px-3 py-2 rounded-md text-base font-semibold">Resume Score</Link>
+                <Link to="/" className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-semibold">Home</Link>
+                <Link to="/" className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-semibold">Plan-Free</Link>
+                <Link to="/" className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-semibold">Job</Link>
+                <Link to="/" className="text-white hover:text-blue-600 block px-3 py-2 rounded-md text-base font-semibold">Resume Score</Link>
                 
               </div>
             </div>

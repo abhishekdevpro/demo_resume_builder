@@ -16,8 +16,8 @@ function Home_first() {
                     <div className=' font-extrabold text-5xl font-sans'>"Demoname" AI Powered Resume Tool, Is Live NOW</div>
                     <div className=' text-lg font-medium text-slate-700'>Resume Score, Enhanced Resume & much more. Now Apply Job with confidence with our all in one solution under one roof.</div>
                     <div className=' flex flex-wrap gap-4'>
-                        <button className='  px-6 py-2 text-lg rounded-full font-bold hover:shadow-2xl hover:shadow-slate-500' id='home_fourth'> Sign Up! Its 100% Free!</button>
-                        <button className=' text-white text-lg px-6 py-2 rounded-full  font-bold hover:shadow-2xl hover:shadow-slate-500 ' id='home_third'> Build your Resume</button>
+                        <button className='  px-6 py-2 text-lg text-white bg-blue-700 rounded-full font-bold hover:shadow-2xl hover:shadow-slate-500'> Sign Up! Its 100% Free!</button>
+                        <button className=' text-white bg-pink-600 text-lg px-6 py-2 rounded-full  font-bold hover:shadow-2xl hover:shadow-slate-500 ' > Build your Resume</button>
                     </div>
                     {/* <div className=' flex flex-wrap'>EXCELLENT <img src='https://www.resume-now.com/sapp/themes/resumenow/img/stars-4.5.svg' className=' h-6 w-16'/> rating 9212 reviews on <img src='https://www.resume-now.com/sapp/themes/resumenow/img/trustpilot-black.png' className=' h-6 w-16'/></div> */}
                     <div className=' font-bold text-base'>

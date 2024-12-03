@@ -11,7 +11,7 @@ function Left() {
   };
 
   return (
-    <div className="hidden md:flex md:flex-col md:py-36 md:w-[23%] md:justify-start md:p-5 bg-gray-500">
+    <div className="hidden md:flex md:flex-col md:py-36 md:w-[23%] md:justify-start md:p-5 bg-gray-400">
       <nav>
         <div className="flex flex-col">
         <Link 
