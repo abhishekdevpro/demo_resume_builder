@@ -133,7 +133,8 @@ const Navbar = () => {
               className="text-black hover:text-blue-600  px-3 py-2 rounded-md text-lg font-semibold">AI Resume Builder</Link>
               <Link to="" className="text-black hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold">Resources</Link>
               <Link to=""  className="text-black hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold">About Us</Link>
-              <button
+            { !token&& <>
+            <button
                 className="bg-blue-700 text-white hover:shadow-2xl hover:shadow-pink-800 font-semibold px-6 py-2 rounded-full"
                 onClick={() => setLoginOpen(true)}
               >
@@ -145,6 +146,8 @@ const Navbar = () => {
               >
                 Signup
               </button>
+              </>
+              }
             </div>
 
             {/* Hamburger Icon for Mobile */}
@@ -167,7 +170,8 @@ const Navbar = () => {
                 <Link to={token?(`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`):""} className="block text-black hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">AI Resume Builder</Link>
                 <Link to="" className="block text-black hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">Resources</Link>
                 <Link to="" className="block text-black hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium">About Us</Link>
-                <button
+              {!token&&<>
+               <button
                   className="w-full bg-blue-700 text-white font-medium px-4 py-2 rounded-md"
                   onClick={() => setLoginOpen(true)}
                 >
@@ -179,6 +183,7 @@ const Navbar = () => {
                 >
                   Signup
                 </button>
+                  </>} 
               </div>
             </div>
           )}

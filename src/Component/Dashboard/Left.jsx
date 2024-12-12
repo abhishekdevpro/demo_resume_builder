@@ -23,6 +23,7 @@ function Left() {
           </Link>
           <Link 
             to={`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`} 
+            // to={`http://localhost:3000?token=${token}`} 
             className={`mb-2 px-2 py-2 rounded-md ${activeTab === '/uploadresume' ? 'bg-slate-900 text-white' : 'bg-slate-700 text-white'}`}
             onClick={() => handleTabClick('/uploadresume')}
           >
@@ -36,7 +37,8 @@ function Left() {
             <i className="fa-solid fa-file p-3 text-purple-500"></i>AI Resume Builder
           </Link>
           <Link 
-            to="https://blog.abroadium.com/category/candidate-resources/" 
+            // to="https://blog.abroadium.com/category/candidate-resources/" 
+            to="#" 
             className={`mb-2 px-2 py-2 rounded-md ${activeTab === 'https://blog.abroadium.com/category/candidate-resources/' ? 'bg-slate-900 text-white' : 'bg-slate-700 text-white'}`}
             onClick={() => handleTabClick('https://blog.abroadium.com/category/candidate-resources/')}
           >

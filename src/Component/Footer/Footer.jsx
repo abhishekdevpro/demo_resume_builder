@@ -79,7 +79,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="container text-base md:mx-auto text-center border-t border-white pt-6 mt-6">
-                <p className="text-white text-center md:text-right">&copy; Copyright By Demoname.com All Rights Reserved</p>
+                <p className="text-black text-center md:text-right">&copy; Copyright By Demoname.com All Rights Reserved</p>
             </div>
         </footer>
         </>

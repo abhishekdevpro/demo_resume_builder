@@ -5,8 +5,31 @@ import Home_Second from './Home_Second'
 import Home_Image from './Home_Image'
 // import Slider from './Slider'
 import Slider_details from './Slider_details'
+import { Link, useNavigate } from 'react-router-dom'
+import Modal from '../Login/Modal'
+import Signup from '../Login/Signup'
+import { useState } from 'react'
+import toast from 'react-hot-toast'
 
 function Home_first() {
+  const token=localStorage.getItem('token')
+  const [isSignupOpen, setSignupOpen] = useState(false);
+  
+  const handleSignup=()=>{
+    if(token){
+      toast.success("Already signed up")
+    }
+    else 
+    setSignupOpen(true);
+  }
+  const handleBuildResume=()=>{
+    if(token){
+      window.location.href=`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`
+    }
+    else
+    toast.success("Please Login first!")
+  }
+
   return (
     <>
       <div className=' bg-gray-100'>
@@ -16,8 +39,18 @@ function Home_first() {
                     <div className=' font-extrabold text-5xl font-sans'>"Demoname" AI Powered Resume Tool, Is Live NOW</div>
                     <div className=' text-lg font-medium text-slate-700'>Resume Score, Enhanced Resume & much more. Now Apply Job with confidence with our all in one solution under one roof.</div>
                     <div className=' flex flex-wrap gap-4'>
-                        <button className='  px-6 py-2 text-lg text-white bg-blue-700 rounded-full font-bold hover:shadow-2xl hover:shadow-slate-500'> Sign Up! Its 100% Free!</button>
-                        <button className=' text-white bg-pink-600 text-lg px-6 py-2 rounded-full  font-bold hover:shadow-2xl hover:shadow-slate-500 ' > Build your Resume</button>
+                        <Link >
+                        <button className='  px-6 py-2 text-lg text-white bg-blue-700 rounded-full font-bold hover:shadow-2xl hover:shadow-slate-500'
+                        onClick={() => handleSignup()}
+                        > Sign Up! Its 100% Free!</button>
+                        </Link>
+                        <Link 
+                        // to={token?(`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`):("")}
+                        >
+                        <button 
+                        onClick={()=>handleBuildResume()}
+                        className=' text-white bg-pink-600 text-lg px-6 py-2 rounded-full  font-bold hover:shadow-2xl hover:shadow-slate-500 ' > Build your Resume</button>
+                        </Link>
                     </div>
                     {/* <div className=' flex flex-wrap'>EXCELLENT <img src='https://www.resume-now.com/sapp/themes/resumenow/img/stars-4.5.svg' className=' h-6 w-16'/> rating 9212 reviews on <img src='https://www.resume-now.com/sapp/themes/resumenow/img/trustpilot-black.png' className=' h-6 w-16'/></div> */}
                     <div className=' font-bold text-base'>
@@ -42,6 +75,9 @@ function Home_first() {
       <Slider_details/>
      
       <Home_Second/>
+      <Modal isOpen={isSignupOpen} onClose={() => setSignupOpen(false)}>
+        <Signup />
+      </Modal>
     </>
   )
 }
