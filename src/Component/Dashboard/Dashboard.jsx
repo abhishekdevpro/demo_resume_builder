@@ -52,8 +52,8 @@ const Dashboard = () => {
             setLoading(false);
           });
       }, []);
-
-  return (
+ const token =localStorage.getItem('token');
+  return token?(
   <>
      <div className=" min-h-screen w-screen md:w-11/12 bg-white  py-12 " >  
      
@@ -194,7 +194,7 @@ const Dashboard = () => {
       
     </div>
   </>
-  );
+  ):("")
 }
 
 export default Dashboard;

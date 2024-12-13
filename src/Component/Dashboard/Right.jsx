@@ -1,6 +1,6 @@
 import './Home.css'; // Assuming you have additional styles in Home.css
 import { Link } from 'react-router-dom';
-
+const token=localStorage.getItem('token');
 function Right() {
   return (
     <div className="hidden md:flex md:flex-col md:w-[20%] md:px-4 md:py-36 float-end text-center bg-gray-400" >
@@ -26,7 +26,7 @@ function Right() {
         </div>
       </div>
     </div>
-  );
+ );
 }
 
 export default Right;

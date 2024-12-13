@@ -12,7 +12,7 @@ const Navbar = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [isLoading, setLoading1] = useState(false);
   const [error, setError] = useState(null);
-
+  const token = localStorage.getItem('token');
   const handleClick = async () => {
     setIsOpen(!isOpen);
     if (!isOpen) {
@@ -86,7 +86,7 @@ const Navbar = () => {
     alert('Suggestions copied to clipboard!');
   };
 
-  return (
+  return(
     <>
       <nav className="fixed z-50 min-w-full " id='bgnavbar'>
         <div className="px-4 bg-white">

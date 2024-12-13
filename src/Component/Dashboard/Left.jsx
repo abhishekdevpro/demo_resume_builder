@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Home.css';
 import { Link, useLocation } from 'react-router-dom';
+import { Heading1 } from 'lucide-react';
 
 function Left() {
   const location = useLocation();
@@ -9,10 +10,15 @@ function Left() {
   const handleTabClick = (path) => {
     setActiveTab(path);
   };
-
+  const handleLogout= () => {
+    if(token){
+      localStorage.removeItem('token')
+      navigate("/")
+    }
+  }
   return (
     <div className="hidden md:flex md:flex-col md:py-36 md:w-[23%] md:justify-start md:p-5 bg-gray-400">
-      <nav>
+    <nav>
         <div className="flex flex-col">
         <Link 
             to="/dashboard" 
@@ -22,8 +28,8 @@ function Left() {
             <i className="fa-solid fa-book-open-reader p-3 text-purple-500"></i>Dashboard
           </Link>
           <Link 
-            to={`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`} 
-            // to={`http://localhost:3000?token=${token}`} 
+            // to={`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`} 
+            to={`http://localhost:3000?token=${token}`} 
             className={`mb-2 px-2 py-2 rounded-md ${activeTab === '/uploadresume' ? 'bg-slate-900 text-white' : 'bg-slate-700 text-white'}`}
             onClick={() => handleTabClick('/uploadresume')}
           >
@@ -71,7 +77,7 @@ function Left() {
             onClick={() => handleTabClick('/')}
           >
             <i className="fa-solid fa-file p-3 text-purple-500"></i>Education
-          </Link>
+            </Link>
           <Link 
             to="/" 
             className={`mb-2 px-2 py-2 rounded-md ${activeTab === '/' ? 'bg-slate-900 text-white' : 'bg-slate-800 text-gray-400'}`}
@@ -87,15 +93,16 @@ function Left() {
             <i className="fa-solid fa-gear p-3 text-purple-500"></i>Settings
           </Link>
           <Link 
-            to="/" 
+          to="/" 
             className={`mb-2 px-2 py-2 rounded-md ${activeTab === '/' ? 'bg-slate-900 text-white' : 'bg-slate-700 text-gray-400'}`}
-            onClick={() => handleTabClick('/')}
-          >
+            // onClick={() => handleTabClick('/')}
+            onClick={handleLogout}
+            >
             <i className="fa-solid fa-right-to-bracket p-3 text-purple-500"></i>Log Out
-          </Link>
-        </div>
-      </nav>
-    </div>
+            </Link>
+            </div>
+            </nav>
+            </div>
   );
 }
 

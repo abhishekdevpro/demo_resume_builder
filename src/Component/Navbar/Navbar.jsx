@@ -99,19 +99,34 @@
 
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from './logoss.jpg';
 import './Navbar.css';
 import '../Home/Home.css';
 import Modal from '../Login/Modal';
 import Login from '../Login/Login';
 import Signup from '../Login/Signup';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoginOpen, setLoginOpen] = useState(false);
   const [isSignupOpen, setSignupOpen] = useState(false);
   const token=localStorage.getItem('token')
+  const navigate=useNavigate();
+  const handleBuildResume=()=>{
+    if(token){
+      window.location.href=`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`
+    }
+    else
+    toast.success("Please Login first!")
+  }
+  const handleLogout=()=>{
+    if(token){
+      localStorage.removeItem('token')
+      navigate("/")
+    }
+  }
 
   return (
     <>
@@ -128,7 +143,8 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <div className="hidden sm:flex sm:items-center sm:space-x-8">
               <Link 
-              to={token?(`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`):""}
+              // to={token?(`https://demo-resume-builder-dev-fe.vercel.app/builder?token=${token}`):""}
+              onClick={()=>handleBuildResume()}
               
               className="text-black hover:text-blue-600  px-3 py-2 rounded-md text-lg font-semibold">AI Resume Builder</Link>
               <Link to="" className="text-black hover:text-blue-600 px-3 py-2 rounded-md text-lg font-semibold">Resources</Link>
@@ -148,6 +164,15 @@ const Navbar = () => {
               </button>
               </>
               }
+              {token&&<>
+                <button
+                className="bg-blue-700 text-white hover:shadow-2xl hover:shadow-pink-800 font-semibold px-6 py-2 rounded-full"
+                // onClick={() => setLoginOpen(true)}
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+              </>}
             </div>
 
             {/* Hamburger Icon for Mobile */}
@@ -184,6 +209,15 @@ const Navbar = () => {
                   Signup
                 </button>
                   </>} 
+                  {token&&<>
+                <button
+                className="bg-blue-700 text-white hover:shadow-2xl hover:shadow-pink-800 font-semibold px-6 py-2 rounded-full"
+                // onClick={() => setLoginOpen(true)}
+                onClick={handleLogout}
+              >
+                Logout
+              </button>
+              </>}
               </div>
             </div>
           )}

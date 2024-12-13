@@ -121,7 +121,7 @@ function AIResume() {
     }
   };
 
-  return (
+  return token? (
     <>
       <div className='bg-gray-400 w-full px-5'>
         <div className='mt-20'>
@@ -264,7 +264,7 @@ function AIResume() {
         )}
       </Modal>
     </>
-  );
+  ):("")
 }
 
 export default AIResume;
